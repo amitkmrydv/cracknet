@@ -1,0 +1,192 @@
+body {
+    background: #fafafa;
+    color: #333333;
+    margin-top: 5rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+  }
+  
+  .bg-steel {
+    background-color: #313131;
+  }
+  
+  .site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+  }
+  
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+  
+  .content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+  
+  .article-title {
+    color: #444444;
+  }
+  
+  a.article-title:hover {
+    color: #428bca;
+    text-decoration: none;
+  }
+  
+  .article-content {
+    white-space: pre-line;
+  }
+  
+  .article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+  }
+  
+  .article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+  }
+  
+  .article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
+  
+  .account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .account-heading {
+    font-size: 2.5rem;
+  }
+  /* my code */
+  a:hover{
+    text-decoration: none;
+  }
+  /* a.comment{
+    color:black;
+  } */
+  
+  .acc-nav-img{
+    border-radius:50%;
+    height:30px;
+    width:30px;
+  }
+  .club_cover{
+    height:300px;
+    width:300px;
+  }
+  #saeclub_cover{
+    height:300px;
+    width:500px;
+  }
+  a.no-color {
+    color:black;
+  }
+  a.white-hover:hover{
+    color:white;
+  }
+
+/* search bar */
+/*** COLORS ***/
+@bg-color: #913D88;
+@txt-color: #FFFFFF;
+@icn-color: #FFFFFF;
+
+/*** DEMO ***/
+.cntr{display:table;width:100%;height:100%;.cntr-innr{display:table-cell;text-align:center;vertical-align:middle}}
+
+/*** STYLES ***/
+.search {
+	display: inline-block;
+	position: relative;
+	height: 35px;
+	width: 35px;
+	box-sizing: border-box;
+	margin: 0px 8px 7px 0px;
+	padding: 7px 9px 0px 9px;
+	border: 3px solid @icn-color;
+	border-radius: 25px;
+	transition: all 200ms ease;
+	cursor: text;
+	
+	&:after {
+		content: "";
+		position: absolute;
+		width: 3px;
+		height: 20px;
+		right: -5px;
+		top: 21px;
+		background: @icn-color;
+		border-radius: 3px;
+		transform: rotate(-45deg);
+		transition: all 200ms ease;
+	}
+	
+	&.active,
+	&:hover {
+		width: 200px;
+		margin-right: 0px;
+		
+		&:after {
+			height: 0px;	
+		}
+	}
+	
+	input {
+		width: 100%;
+		border: none;
+		box-sizing: border-box;
+		font-family: Helvetica;
+		font-size: 15px;
+		color: inherit;
+		background: transparent;
+		outline-width: 0px;
+	}
+}
+
+
+
+@media(max-width:767px){
+  .account-heading {
+    font-size: 1.5rem;
+  }
+  .account-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+  .rounded-circle{
+    height: 50px;
+    width: 50px;
+  }
+  .club_cover{
+    height:200px;
+    width:200px;
+  }
+  #saeclub_cover{
+    height:180px;
+    width:250px;
+  }
+}
