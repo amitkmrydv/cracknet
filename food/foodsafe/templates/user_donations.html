@@ -1,0 +1,31 @@
+{% extends 'layout.html'%}
+{% block content %}
+    <h1 class="mb-3">Donations by {{ user.username }} ({{donations.total}})</h1>
+    {% for donate in donations.items %}
+    <article class="media content-section">
+        <img src="{{ url_for('static', filename='profile_pics/'+ post.author.image_file)}}" alt="" class="rounded-circle article-img">
+        <div class="media-body">
+          <div class="article-metadata">
+            {% if current_user.username != donate.author.username %}
+              <a class="mr-2" href="{{ url_for('profile', username=donate.author.username) }}">{{ donate.author.username }}</a>
+            {% else %}  
+              <a class="mr-2" href="{{ url_for('account') }}">{{ donate.author.username }}</a>
+            {% endif %}
+            <small class="text-muted">{{ donate.date_donate.strftime('%Y-%m-%d') }}</small>
+          </div>
+            <p class="article-content">{{ donate.content }}</p>
+        </div>
+        </article>
+    {% endfor %}
+    {% for page_num in donations.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+        {% if page_num %}
+          {% if donations.page == page_num %}
+            <a class="btn btn-info mb-4" href="{{ url_for('user_donations', username=user.username, page=page_num) }}">{{ page_num }}</a>
+          {% else %}  
+            <a class="btn btn-outline-info mb-4" href="{{ url_for('home', username=user.username, page=page_num) }}">{{ page_num }}</a>
+          {% endif %}  
+        {% else %}
+          ...
+        {% endif %}
+    {% endfor %}
+{% endblock content %}

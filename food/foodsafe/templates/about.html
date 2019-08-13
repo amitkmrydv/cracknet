@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<h1><marquee> This is a College-Interacting-app for learners.</marquee></h1>
+			    <p> From this web app u can acknowledge other learners through your valueable experince.</p>
+			    <br>
+			    <legend> Good Luck!</legend>
+			</div>			
+		</div>
+		<div class="row mt-5">
+			<div class="col">
+				<h1><i><b><u>Developers</u></b></i></h1>
+			</div>
+		</div>
+		<div class="row mt-5">
+			<div class="col">
+				<img class="intro-pic" src="{{ url_for('static', filename='profile_pics/amit.jpeg')}}" alt="Amit K Yadav" style="width: 300px;height: 300px;">	
+				<h1 class="text-center">Amit K Yadav</h1>
+			</div>
+			<div class="col">
+				<img class="intro-pic" src="{{ url_for('static', filename='profile_pics/ishan.jpeg')}}" alt="Ishan Gupta" style="width: 300px;height: 300px;">
+				<h1 class="text-center">Ishan Gupta</h1>	
+			</div>
+			<div class="col">
+				<img class="intro-pic" src="{{ url_for('static', filename='profile_pics/rishabh.jpeg')}}" alt="Rishabh Sharma" style="width: 300px;height: 300px;">
+				<h1 class="text-center">Rishabh Sharma</h1>	
+			</div>
+		</div>
+		<!--Contact Section-->
+		<section class="contact">
+			<div class="container">
+				<div class="row contact-row1">
+					<h1 class="Section_head">CONTACT</h1>
+				</div>
+				<div class="row contact-row2">
+					<h4 id="Contact_para">If you wanna get in touch,talk to us about a project or just say hi, Feel free to contact us through following mediums. We look forward to hearing from you.</h4>
+				</div>
+				<div class="row pic_row">
+					<img src="{{ url_for('static', filename='profile_pics/contact.png')}}" class="contact_boy">
+				</div>
+				<div class="row contact-row3">
+					<div class="col">
+					  <a href="https://www.facebook.com/Rishabh.SharmaRJ"><img src="{{ url_for('static', filename='profile_pics/fb.png')}}" class="contact_icons"></a>
+					  <a href="https://twitter.com/Rishabh32376152"><img src="{{ url_for('static', filename='profile_pics/twitter.png')}}" class="contact_icons"></a>
+					  <a href="https://www.instagram.com/rishabh_ltfb/"><img src="{{ url_for('static', filename='profile_pics/insta.png')}}" class="contact_icons"></a>
+					  <a href="https://github.com/Rishabhltfb"><img src="{{ url_for('static', filename='profile_pics/git.svg')}}" class="contact_icons"></a>
+	        		</div>
+				</div>
+			</div>
+		</section>
+	</div>
+    <footer>
+      <div class="footer-block">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 pt-2 mx-auto text-center">
+              <h6>&copy; CrackNet |2019</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+{% endblock content %}
